@@ -22,6 +22,8 @@ class PersonData
     private $person_id;
 
     /**
+     * @ORM\OneToOne(targetEntity="Person")
+     * @ORM\JoinColumn(name="person_id", referencedColumnName="id")
      * @ORM\Column(type="string", length=45, nullable=true)
      */
     private $color;
