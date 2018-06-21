@@ -31,6 +31,16 @@ class Product
      */
     private $content;
 
+    /**
+     * @ORM\Column(type="string", length=45, nullable=true)
+     */
+    private $color;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $website;
+
     public function getTitle()
     {
         return $this->title;
@@ -49,5 +59,29 @@ class Product
     public function setContent($content)
     {
         $this->content = $content;
+    }
+
+    public function getColor(): ?string
+    {
+        return $this->color;
+    }
+
+    public function setColor(?string $color): self
+    {
+        $this->color = $color;
+
+        return $this;
+    }
+
+    public function getWebsite(): ?string
+    {
+        return $this->website;
+    }
+
+    public function setWebsite(?string $website): self
+    {
+        $this->website = $website;
+
+        return $this;
     }
 }

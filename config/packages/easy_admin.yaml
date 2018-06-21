@@ -1,3 +1,5 @@
 easy_admin:
     entities:
         - App\Entity\Product
+        - App\Entity\Person
+    site_name: 'Recruitment Task'
